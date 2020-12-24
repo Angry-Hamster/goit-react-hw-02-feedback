@@ -19,7 +19,7 @@ class Statistic extends Component {
           <li><p>neutral:    {this.props.neutral}</p></li>
           <li><p>bad:        {this.props.bad}</p></li>
           <li><p>total:      {this.props.total}</p></li>
-          <li><p>percentage: {Math.floor(this.props.positivePercentage)}</p></li>
+          <li><p>percentage: {Math.floor(Number(this.props.positivePercentage))}%</p></li>
         </ul>
       </>
     )

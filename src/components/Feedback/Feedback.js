@@ -27,7 +27,7 @@ class Feedback extends Component {
   countPositiveFeedbackPercentage = (state) => {
     const {total} = this.extendedState
     const {good} = state
-    let posetive = good / total * 100 + '%'
+    let posetive = good / total * 100
 
     this.extendedState.posetive = posetive;
   };

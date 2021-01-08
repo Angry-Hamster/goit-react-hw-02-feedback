@@ -14,6 +14,12 @@ class FeedbackOptions  extends Component {
       [e.target.name]: ++this.state[e.target.name]
     })
 
+    // this.setState((prev) => ({ [name]: (prev[name] +1) }));
+    // [e.target.name]: ++this.state[e.target.name]
+
+    console.log(name, this.state[name]);
+    console.log(this.state, this.state[name]);
+
     this.props.onLeaveFeedback(this.state);
   }
 

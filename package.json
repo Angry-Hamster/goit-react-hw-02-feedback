@@ -13,7 +13,6 @@
     "react-scripts": "4.0.1",
     "web-vitals": "^0.2.4"
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Angry-Hamster/goit-react-hw-02-feedback"
@@ -24,8 +23,7 @@
     "build": "react-scripts build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
-    },
-
+  },
   "eslintConfig": {
     "extends": [
       "react-app",

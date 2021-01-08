@@ -1,39 +1,38 @@
 import React, { Component } from "react";
 
-import css from './style.module.css'
+import css from "./style.module.css";
 
-class FeedbackOptions  extends Component {
+class FeedbackOptions extends Component {
   state = {
     good: 0,
     neutral: 0,
-    bad: 0
-  }
+    bad: 0,
+  };
 
   handleAdd = (e) => {
-    this.setState({
-      [e.target.name]: ++this.state[e.target.name]
-    })
+    const { name } = e.target;
 
     // this.setState((prev) => ({ [name]: (prev[name] +1) }));
-    // [e.target.name]: ++this.state[e.target.name]
-
-    console.log(name, this.state[name]);
-    console.log(this.state, this.state[name]);
+    this.setState({[name]: ++this.state[name]})
 
     this.props.onLeaveFeedback(this.state);
-  }
+  };
 
-  render(){
-    return(
-      <>
-        <div>
-          <button className={css.button} onClick={this.handleAdd} name='good'>Good</button>
-          <button className={css.button} onClick={this.handleAdd} name='neutral'>Neutral</button>
-          <button className={css.button} onClick={this.handleAdd} name='bad'>Bad</button>
-        </div>
-      </>
-    )
+  render() {
+    return (
+      <div>
+        <button className={css.button} onClick={this.handleAdd} name="good">
+          Good
+        </button>
+        <button className={css.button} onClick={this.handleAdd} name="neutral">
+          Neutral
+        </button>
+        <button className={css.button} onClick={this.handleAdd} name="bad">
+          Bad
+        </button>
+      </div>
+    );
   }
 }
 
-export default FeedbackOptions
+export default FeedbackOptions;

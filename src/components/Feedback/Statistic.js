@@ -1,16 +1,9 @@
 import React, { Component } from "react";
+import PropTypes from 'prop-types';
 
 import css from './style.module.css'
 
 class Statistic extends Component {
-  static defaultProps = {
-    good: 0,
-    neutral: 0,
-    bad: 0,
-    total: 0,
-    positivePercentage: 0,
-  }
-
   render(){
     return(
       <>
@@ -24,6 +17,22 @@ class Statistic extends Component {
       </>
     )
   }
+}
+
+Statistic.defaultProps = {
+  good: 0,
+  neutral: 0,
+  bad: 0,
+  total: 0,
+  positivePercentage: 0,
+}
+
+Statistic.propTypes = {
+  good: PropTypes.number,
+  neutral: PropTypes.number,
+  bad: PropTypes.number,
+  total: PropTypes.number,
+  positivePercentage: PropTypes.number,
 }
 
 export default Statistic

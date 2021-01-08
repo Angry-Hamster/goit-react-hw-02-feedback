@@ -1,12 +1,9 @@
 import React, { Component } from "react";
+import PropTypes from 'prop-types';
 
 import css from './style.module.css'
 
 class Notification   extends Component {
-  static defaultProps = {
-    message: 'No feedback given',
-  }
-
   render(){
     return(
       <>
@@ -14,6 +11,14 @@ class Notification   extends Component {
       </>
     )
   }
+}
+
+Notification.defaultProps = {
+  message: 'Title',
+}
+
+Notification.propTypes = {
+  message: PropTypes.string,
 }
 
 export default Notification

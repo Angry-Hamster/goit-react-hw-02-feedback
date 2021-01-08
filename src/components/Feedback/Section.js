@@ -1,13 +1,9 @@
 import React, { Component } from "react";
+import PropTypes from 'prop-types';
 
 import css from './style.module.css'
 
 class Section  extends Component {
-  static defaultProps = {
-    title: 'Title',
-    component: '<></>'
-  }
-
   render(){
     return(
       <>
@@ -16,6 +12,15 @@ class Section  extends Component {
       </>
     )
   }
+}
+
+Section.defaultProps = {
+  title: 'Title',
+  component: '<></>'
+}
+
+Section.propTypes = {
+  title: PropTypes.string,
 }
 
 export default Section
